@@ -15,6 +15,8 @@ namespace DF984515MIS4200.DAL
 
         public DbSet<Orders> Orders { get; set; }
         public DbSet<Customer> Customer { get; set; }
+        public DbSet<Products> Products { get; set; }
+        public DbSet<OrderDetails> OrderDetails { get; set; }
 
     }
 }

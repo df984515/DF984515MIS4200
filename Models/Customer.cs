@@ -16,5 +16,7 @@ namespace DF984515MIS4200.Models
 
         public ICollection<Orders> Orders{ get; set; }
 
+        public string fullName { get { return lastName + ", " + firstName; } }
+
     }
 }
