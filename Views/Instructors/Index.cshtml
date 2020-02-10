@@ -1,10 +1,10 @@
-﻿@model IEnumerable<DF984515MIS4200.Models.Student>
+﻿@model IEnumerable<DF984515MIS4200.Models.Instructor>
 
 @{
-    ViewBag.Title = "Student Index";
+    ViewBag.Title = "Instructor Index";
 }
 
-<h2>Student Index</h2>
+<h2>Instructor Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.phoneNumber)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.studentID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.studentID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.studentID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.instructorID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.instructorID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.instructorID })
         </td>
     </tr>
 }
