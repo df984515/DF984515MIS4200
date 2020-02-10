@@ -20,6 +20,9 @@ namespace DF984515MIS4200.DAL
         public DbSet<Products> Products { get; set; }
         public DbSet<OrderDetails> OrderDetails { get; set; }
 
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Course> Courses { get; set; }
+
 
         // add this method - it will be used later
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
