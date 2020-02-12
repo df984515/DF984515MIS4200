@@ -5,14 +5,14 @@ using System.Web;
 
 namespace DF984515MIS4200.Models
 {
-    public class Instructor
+    public class Student
     {
-        public int instructorID { get; set; }
+        public int studentID { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string email { get; set; }
         public string phoneNumber { get; set; }
 
-        public ICollection<Course> Course { get; set; }
+        public ICollection<CourseDetail> CourseDetail { get; set; }
     }
 }
