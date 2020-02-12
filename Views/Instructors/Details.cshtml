@@ -1,13 +1,13 @@
-﻿@model DF984515MIS4200.Models.Student
+﻿@model DF984515MIS4200.Models.Instructor
 
 @{
-    ViewBag.Title = "Student Details";
+    ViewBag.Title = "Details";
 }
 
-<h2>Student Details</h2>
+<h2>Details</h2>
 
 <div>
-    <h4>Student</h4>
+    <h4>Instructor</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -42,17 +42,9 @@
             @Html.DisplayFor(model => model.phoneNumber)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.studentYear)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.studentYear)
-        </dd>
-
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.studentID }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.instructorID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
