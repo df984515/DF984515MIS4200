@@ -20,9 +20,8 @@ namespace DF984515MIS4200.DAL
         public DbSet<Products> Products { get; set; }
         public DbSet<OrderDetails> OrderDetails { get; set; }
 
-        public DbSet<Course> Courses { get; set; }
         public DbSet<Student> Students { get; set; }
-        
+        public DbSet<Course> Courses { get; set; }
 
 
         // add this method - it will be used later
@@ -32,8 +31,5 @@ namespace DF984515MIS4200.DAL
             base.OnModelCreating(modelBuilder);
         }
 
-        public System.Data.Entity.DbSet<DF984515MIS4200.Models.Instructor> Instructors { get; set; }
-
-        public System.Data.Entity.DbSet<DF984515MIS4200.Models.CourseDetail> CourseDetails { get; set; }
     }
 }
