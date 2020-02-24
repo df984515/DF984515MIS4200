@@ -24,12 +24,23 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Instructors", "Index", "Instructors")</li>
-                    <li>@Html.ActionLink("Students", "Index", "Students")</li>
-                    <li>@Html.ActionLink("Courses", "Index", "Courses")</li>
-                    <li>@Html.ActionLink("Course Details", "Index", "CourseDetails")</li>
+                    <li>
+                        <span class="dropdown">
+                            <a href="#" class="btn btn-default dropdown-menu-left" style="background-color:transparent; color:Window; margin-top:10px;" data-toggle="dropdown" aria-expanded="false">
+                                Course Items
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Instructors">Instructors</a></li>
+                                <li><a href="Students">Students</a></li>
+                                <li><a href="Courses">Courses</a></li>
+                                <li><a href="CourseDetails">Course Details</a></li>
+                            </ul>
+                        </span>
+                    </li>
 
                 </ul>
+                
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
