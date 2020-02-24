@@ -10,10 +10,16 @@ namespace DF984515MIS4200.Models
     {
         public int coursedetailID { get; set; }
         [Display (Name = "Start Date")]
+        [Required]
+        [DataType(DataType.Date)]
         public DateTime startDate { get; set; }
         [Display(Name = "End Date")]
+        [Required]
+        [DataType(DataType.Date)]
         public DateTime endDate { get; set; }
         [Display(Name = "Location")]
+        [Required]
+        [StringLength(50)]
         public string location { get; set; }
 
         public int courseID { get; set; }

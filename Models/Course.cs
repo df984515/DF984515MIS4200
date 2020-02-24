@@ -11,6 +11,8 @@ namespace DF984515MIS4200.Models
         [Key]
         public int courseID { get; set; }
         [Display (Name = "Course Name")]
+        [Required]
+        [StringLength(50)]
         public string courseName { get; set; }
 
         public int instructorID { get; set; }
