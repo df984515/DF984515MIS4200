@@ -10,13 +10,11 @@ namespace DF984515MIS4200.Models
     {
         [Key]
         public int courseID { get; set; }
+        public string description { get; set; }
+        public DateTime startDate { get; set; }
+        public DateTime endDate { get; set; }
 
-        public string courseName { get; set; }
-
-        public int instructorID { get; set; }
-        public virtual Instructor Instructor { get; set; }
-
-        public ICollection<CourseDetail> CourseDetail { get; set; }
-
+        public int studentID { get; set; }
+        public virtual Student Student { get; set; }
     }
 }
