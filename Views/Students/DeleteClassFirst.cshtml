@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "DeleteClassFirst";
+}
+
+<br />
+<div class="alert alert-danger">
+    <h2>Not Allowed</h2>
+    <p>You need to be either:
+        <ul>
+            <li>Delete the course details related to this course</li>
+            <li>Delete the course details related to this student</li>
+        </ul>
+    </p>
+</div>
+<br />
+@Html.ActionLink("Course Details", "Index", "CourseDetails")
+

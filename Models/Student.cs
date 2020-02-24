@@ -8,6 +8,8 @@ namespace DF984515MIS4200.Models
 {
     public class Student
     {
+        [Required]
+        public Guid ID { get; set; }
         public int studentID { get; set; }
         [Display (Name = "First Name")]
         [Required]

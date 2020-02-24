@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using DF984515MIS4200.DAL;
 using DF984515MIS4200.Models;
+using Microsoft.AspNet.Identity;
 
 namespace DF984515MIS4200.Controllers
 {
@@ -18,7 +19,15 @@ namespace DF984515MIS4200.Controllers
         // GET: Students
         public ActionResult Index()
         {
-            return View(db.Students.ToList());
+            if (User.Identity.IsAuthenticated)
+            {
+                return View(db.Students.ToList());
+            }
+            else
+            {
+                return View("NotAuthenticated");
+            }
+            
         }
 
         // GET: Students/Details/5
@@ -51,9 +60,20 @@ namespace DF984515MIS4200.Controllers
         {
             if (ModelState.IsValid)
             {
+                Guid studentID;
+                Guid.TryParse(User.Identity.GetUserId(), out studentID);
+                student.ID = Guid.NewGuid();
                 db.Students.Add(student);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                try
+                {
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception)
+                {
+                    return View("DuplicateUser");
+                }
+                
             }
 
             return View(student);
@@ -71,7 +91,17 @@ namespace DF984515MIS4200.Controllers
             {
                 return HttpNotFound();
             }
-            return View(student);
+            Guid studentID;
+            Guid.TryParse(User.Identity.GetUserId(), out studentID);
+            if (student.ID == studentID)
+            {
+                return View(student);
+            }
+            else
+            {
+                return View("NotAuthenticated");
+            }
+            
         }
 
         // POST: Students/Edit/5
