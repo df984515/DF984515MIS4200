@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<DF984515MIS4200.Models.Course>
 
 @{
-    ViewBag.Title = "Course Index";
+    ViewBag.Title = "Current Courses";
 }
 
-<h2>Course Index</h2>
+<h2>Current Courses</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Instructor.firstName)
+            @Html.DisplayNameFor(model => model.Instructor.fullName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.courseName)
@@ -23,7 +23,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Instructor.firstName)
+            @Html.DisplayFor(modelItem => item.Instructor.fullName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.courseName)

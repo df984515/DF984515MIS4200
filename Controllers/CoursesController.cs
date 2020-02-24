@@ -40,7 +40,7 @@ namespace DF984515MIS4200.Controllers
         // GET: Courses/Create
         public ActionResult Create()
         {
-            ViewBag.instructorID = new SelectList(db.Instructors, "instructorID", "firstName");
+            ViewBag.instructorID = new SelectList(db.Instructors, "instructorID", "fullName");
             return View();
         }
 
@@ -74,7 +74,7 @@ namespace DF984515MIS4200.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.instructorID = new SelectList(db.Instructors, "instructorID", "firstName", course.instructorID);
+            ViewBag.instructorID = new SelectList(db.Instructors, "instructorID", "fullName", course.instructorID);
             return View(course);
         }
 

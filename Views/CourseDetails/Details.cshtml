@@ -1,10 +1,10 @@
 ﻿@model DF984515MIS4200.Models.CourseDetail
 
 @{
-    ViewBag.Title = "Course Details Cont.";
+    ViewBag.Title = "Course Details";
 }
 
-<h2>Course Detail Cont.</h2>
+<h2>Course Details</h2>
 
 <div>
     <h4>CourseDetail</h4>
@@ -19,11 +19,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Student.firstName)
+            @Html.DisplayNameFor(model => model.Student.fullName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Student.firstName)
+            @Html.DisplayFor(model => model.Student.fullName)
         </dd>
 
         <dt>
